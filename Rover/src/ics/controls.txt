@@ -1,0 +1,6 @@
+Move Forward: type "f" or "forward"
+Turn Left: type "l" or "left"
+Turn Right: type "r" or "right"
+Start Rover: type "start"
+Stop Rover: type "stop"
+End Communication With Rover: type "disconnect"
