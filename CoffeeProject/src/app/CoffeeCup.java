@@ -12,6 +12,16 @@ public class CoffeeCup {
     private boolean isFull;  // Is this cup full?  Default value false.
     private String name;
 
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
+
+    private Size size;
+
     /**
      * Returns whether this cup is full (true) or empty(false);
      * @return is this cup full?

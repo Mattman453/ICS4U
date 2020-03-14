@@ -12,6 +12,7 @@ public class CoffeeKlatch {
         // Create a new app.CoffeeMachine and make the variable refer to it.
 
         CoffeeMachine machine = new CoffeeMachine();
+        CoffeePot pot = new CoffeePot();
 
         // Add water and beans to the app.CoffeeMachine.
         machine.addWater();
@@ -27,7 +28,7 @@ public class CoffeeKlatch {
         CoffeeCup cup = new CoffeeCup();
 
         // Have your app.CoffeeMachine brew coffee into the coffee cup.
-        machine.brew(cup);
+        machine.brew(pot);
 
         // Drink from the cup.
         cup.drink();
@@ -39,7 +40,7 @@ public class CoffeeKlatch {
         CoffeeCup cup2 = new CoffeeCup();
 
         // Brew coffee into the new cup.
-        machine.brew(cup2);
+        machine.brew(pot);
 
         // Try to drink from the first cup --it's still empty!
         cup.drink();

@@ -13,6 +13,15 @@ public class CoffeeMachine {
     // The current strength of the coffee.
     private Strength strength;
     private BrewStatus status = BrewStatus.NOTHING;
+    private int waterRemaining = 0;
+
+    public int getWaterRemaining() {
+        return waterRemaining;
+    }
+
+    public void setWaterRemaining(int waterRemaining) {
+        this.waterRemaining = waterRemaining;
+    }
 
     public BrewStatus getStatus() {
         return status;
@@ -73,14 +82,15 @@ public class CoffeeMachine {
 
     /**
      * Brew the coffee into given cup c
-     * @param c The cup of coffee to be filled
+     * @param pot The cup of coffee to be filled
      */
-    public void brew(CoffeeCup c) {
+    public void brew(CoffeePot pot) {
         if (status==BrewStatus.GRINDED) {
             System.out.print("Brewing coffee of strength ");
             System.out.print(strength);
-            System.out.println(" into coffee cup " + c.getName());
-            c.fill();
+            System.out.println(" into coffee pot.");
+            pot.fill();
+            setWaterRemaining(0);
         } else {
             System.out.println("Machine is not ready. Currently on " + status + " step. Required step is grinded.");
         }
@@ -93,6 +103,7 @@ public class CoffeeMachine {
         if (status==BrewStatus.NOTHING) {
             status = BrewStatus.WATER;
             System.out.println("Adding Water");
+            setWaterRemaining(10);
         } else if (status==BrewStatus.BEANS) {
             status = BrewStatus.MIXED;
             System.out.println("Adding Water");
