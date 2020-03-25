@@ -43,6 +43,9 @@ public class CoffeeKlatch {
                     System.out.print("What new strength would you like? Suggestions (Strong, Regular, Weak): ");
                     machine.reset(Input.getWord());
                     break;
+                case "end":
+                    inUse = false;
+                    break;
                 default:
                     System.out.println("Unknown Command. Nothing will be performed this step.");
                     break;
