@@ -20,6 +20,18 @@ public class CoffeeCup {
         this.size = size;
     }
 
+    public void setSize(String size) {
+        if (size.contains("s")) {
+            setSize(Size.SMALL);
+        } else if (size.contains("m")) {
+            setSize(Size.MEDIUM);
+        } else if (size.equals("l")) {
+            setSize(Size.LARGE);
+        } else {
+            setSize(Size.EXTRALARGE);
+        }
+    }
+
     private Size size;
 
     /**
@@ -66,7 +78,8 @@ public class CoffeeCup {
     public CoffeeCup() {
         System.out.print("What is your name: ");
         name = Input.getWord();
-        System.out.println("Hello " + name + ".");
+        System.out.print("Hello " + name + ". What size do you want(S/M/L/XL): ");
+        setSize(Input.getWord().toLowerCase());
         isFull = false;
     }
 

@@ -89,8 +89,18 @@ public class CoffeeMachine {
             System.out.print("Brewing coffee of strength ");
             System.out.print(strength);
             System.out.println(" into coffee pot.");
-            pot.fill();
-            setWaterRemaining(0);
+            if(waterRemaining>=10) {
+                pot.fill();
+                setWaterRemaining(waterRemaining-10);
+            } else if (waterRemaining>0) {
+                pot.fill(waterRemaining);
+                setWaterRemaining(0);
+                status = BrewStatus.BEANS;
+                System.out.println("No water remaining. Add water then grind beans to continue brewing.");
+            } else {
+                System.out.println("No water remaining.");
+            }
+
         } else {
             System.out.println("Machine is not ready. Currently on " + status + " step. Required step is grinded.");
         }
@@ -103,7 +113,7 @@ public class CoffeeMachine {
         if (status==BrewStatus.NOTHING) {
             status = BrewStatus.WATER;
             System.out.println("Adding Water");
-            setWaterRemaining(10);
+            setWaterRemaining(40);
         } else if (status==BrewStatus.BEANS) {
             status = BrewStatus.MIXED;
             System.out.println("Adding Water");
