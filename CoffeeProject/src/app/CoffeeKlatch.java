@@ -1,55 +1,53 @@
 package app;
 
+import mattj.Input;
+
 /**
  *
  * @author Mr. Cutler
  */
 public class CoffeeKlatch {
-
+    static boolean inUse = true;
 
     public static void main(String[] args) {
-
-        // Create a new app.CoffeeMachine and make the variable refer to it.
-
+        System.out.println("Hello user. For controls, read the controls.txt file. Basic controls will be shown in use.");
         CoffeeMachine machine = new CoffeeMachine();
         CoffeePot pot = new CoffeePot();
-
-        // Add water and beans to the app.CoffeeMachine.
-        machine.addWater();
-        machine.addBeans();
-
-        // Get ready to grind some strong coffee in the app.CoffeeMachine.
-        //machine.setStrength("Strong");
-
-        // Grind the beans.
-        machine.grindBeans();
-
-        // Create a new CoffeeCup and make the variable refer to it.
-        CoffeeCup cup = new CoffeeCup();
-
-        // Have your app.CoffeeMachine brew coffee into the coffee cup.
-        machine.brew(pot);
-
-        // Drink from the cup.
-        cup.drink();
-
-        // Try to drink again --the cup is now empty.
-        cup.drink();
-
-        // Declare ANOTHER coffee cup reference and initialize it.
-        CoffeeCup cup2 = new CoffeeCup();
-
-        // Brew coffee into the new cup.
-        machine.brew(pot);
-
-        // Try to drink from the first cup --it's still empty!
-        cup.drink();
-
-        // Drink from the second cup.
-        cup2.drink();
-
-        // Print a sigh of satisfaction.
-        System.out.println("*satisfied sigh*");
+        CoffeeCup cup = null;
+        while(inUse) {
+            String word = Input.getWord().toLowerCase();
+            switch (word) {
+                case "grab":
+                    cup = new CoffeeCup();
+                    break;
+                case "water":
+                    machine.addWater();
+                    break;
+                case "beans":
+                    machine.addBeans();
+                    break;
+                case "grind":
+                    machine.grindBeans();
+                    break;
+                case "brew":
+                    machine.brew(pot);
+                    break;
+                case "fill":
+                    if (cup==null) {
+                        System.out.println("Gotta grab your cup first.");
+                    } else {
+                        pot.pour(cup);
+                    }
+                    break;
+                case "reset":
+                    System.out.print("What new strength would you like? Suggestions (Strong, Regular, Weak): ");
+                    machine.reset(Input.getWord());
+                    break;
+                default:
+                    System.out.println("Unknown Command. Nothing will be performed this step.");
+                    break;
+            }
+        }
     }
 
 }

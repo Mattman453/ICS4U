@@ -89,7 +89,7 @@ public class CoffeeMachine {
             System.out.print("Brewing coffee of strength ");
             System.out.print(strength);
             System.out.println(" into coffee pot.");
-            if(waterRemaining>=10) {
+            if(waterRemaining>10) {
                 pot.fill();
                 setWaterRemaining(waterRemaining-10);
             } else if (waterRemaining>0) {

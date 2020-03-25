@@ -18,7 +18,7 @@ public class CoffeePot {
                 waterRemaining-=2;
             } else if (waterRemaining>0) {
                 System.out.println("Filling cup with " + waterRemaining + " cups of coffee.");
-                cup.fill();
+                cup.fill(waterRemaining);
                 waterRemaining = 0;
             } else {
                 System.out.println("No water remaining in pot. Must be filled in coffee machine.");
@@ -30,7 +30,7 @@ public class CoffeePot {
                 waterRemaining-=4;
             } else if (waterRemaining>0) {
                 System.out.println("Filling cup with " + waterRemaining + " cups of coffee.");
-                cup.fill();
+                cup.fill(waterRemaining);
                 waterRemaining = 0;
             } else {
                 System.out.println("No water remaining in pot. Must be filled in coffee machine.");
@@ -42,7 +42,7 @@ public class CoffeePot {
                 waterRemaining-=6;
             } else if (waterRemaining>0) {
                 System.out.println("Filling cup with " + waterRemaining + " cups of coffee.");
-                cup.fill();
+                cup.fill(waterRemaining);
                 waterRemaining = 0;
             } else {
                 System.out.println("No water remaining in pot. Must be filled in coffee machine.");
@@ -54,7 +54,7 @@ public class CoffeePot {
                 waterRemaining-=8;
             } else if (waterRemaining>0) {
                 System.out.println("Filling cup with " + waterRemaining + " cups of coffee.");
-                cup.fill();
+                cup.fill(waterRemaining);
                 waterRemaining = 0;
             } else {
                 System.out.println("No water remaining in pot. Must be filled in coffee machine.");

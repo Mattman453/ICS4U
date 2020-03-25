@@ -8,9 +8,8 @@ import mattj.Input;
  * @author RD
  */
 public class CoffeeCup {
-
-    private boolean isFull;  // Is this cup full?  Default value false.
     private String name;
+    private int cupsRemaining = 0;
 
     public Size getSize() {
         return size;
@@ -34,18 +33,6 @@ public class CoffeeCup {
 
     private Size size;
 
-    /**
-     * Returns whether this cup is full (true) or empty(false);
-     * @return is this cup full?
-     */
-    public boolean isFull() {
-        return isFull;
-    }
-
-    public void setFull(boolean full) {
-        isFull = full;
-    }
-
     public String getName() {
         return name;
     }
@@ -54,20 +41,29 @@ public class CoffeeCup {
         this.name = name;
     }
 
-    /**
-     * Fill this cup to the top
-     */
     public void fill() {
-        isFull = true;
+        if (size==Size.SMALL) {
+            cupsRemaining = 2;
+        } else if (size==Size.MEDIUM) {
+            cupsRemaining = 4;
+        } else if (size==Size.LARGE) {
+            cupsRemaining = 6;
+        } else {
+            cupsRemaining = 8;
+        }
+    }
+
+    public void fill(int coffee) {
+        cupsRemaining = coffee;
     }
 
     /**
      * Drink this cup entirely
      */
     public boolean drink() {
-        if (isFull) {
-            System.out.println(name + ". You glug the coffee down.");
-            isFull = false;
+        if (cupsRemaining>0) {
+            System.out.println(name + ". You glug " + cupsRemaining + " ounces of coffee down.");
+            cupsRemaining = 0;
             return true;
         } else {
             System.out.println(name + ". You sip furiously, but only suck air.");
@@ -80,7 +76,6 @@ public class CoffeeCup {
         name = Input.getWord();
         System.out.print("Hello " + name + ". What size do you want(S/M/L/XL): ");
         setSize(Input.getWord().toLowerCase());
-        isFull = false;
     }
 
 }

@@ -4,6 +4,7 @@
     <list default="true" id="9b23c42c-905e-4af4-8dfb-8c43939fa46c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/CoffeeCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/CoffeeCup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/CoffeeKlatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/CoffeeKlatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/CoffeeMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/CoffeeMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/CoffeePot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/CoffeePot.java" afterDir="false" />
     </list>
