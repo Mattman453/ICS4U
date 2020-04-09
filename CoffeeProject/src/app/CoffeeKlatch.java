@@ -15,6 +15,9 @@ public class CoffeeKlatch {
         CoffeePot pot = new CoffeePot();
         CoffeeCup cup = null;
         while(inUse) {
+            System.out.println("Status: " + machine.getStatus().toString() + "Commands available are:");
+            System.out.println("grab(get a cup), water(fill machine with water), beans(add beans to machine), grind(get beans in proper condition),");
+            System.out.print("brew(make the coffee), pour(fill your cup): ");
             String word = Input.getWord().toLowerCase();
             switch (word) {
                 case "grab":
@@ -51,6 +54,7 @@ public class CoffeeKlatch {
                     break;
             }
         }
+        System.out.println("Goodbye.");
     }
 
 }
