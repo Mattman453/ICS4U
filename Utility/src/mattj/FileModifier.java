@@ -19,12 +19,17 @@ public class FileModifier {
     File inputFile;
     File outputFile;
 
+    public FileModifier(String file) throws IOException {
+        this(file, file);
+    }
+
+    public FileModifier(String inputFile, String outputFile) throws IOException {
+        this(new File(inputFile), new File(outputFile));
+    }
+
     // Sets the scaner to read the input file
     public FileModifier(File file) throws IOException {
-        inputFile = file;
-        outputFile = file;
-        fileReader = new Scanner(inputFile);
-        printWriter = new PrintWriter(outputFile);
+        this(file, file);
     }
 
     // Sets the scanner to read the input file and the print writer to send information to the output file
