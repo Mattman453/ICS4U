@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class Main {
 
     public static void main(String[] args) {
-        String stats[][] = new String[10][9];
+        String[][] stats = new String[10][9];
         String[] categories = {"Name", "Completions", "Attempts", "Percentage", "Passing Yards", "Yards/Attempt", "TouchDowns", "Interceptions", "Sacks"};
         Scanner scanner = null;
         try {
