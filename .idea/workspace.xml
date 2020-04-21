@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bbf4eb7-7d65-452f-b52c-3bd36de43b83" name="Default Changelist" comment="" />
+    <list default="true" id="b0954b0d-1e2a-465d-b9d1-358cb0d3bfde" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,19 +14,21 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1XMtPBuJcxQ5dUSfGB7ppltDMCG" />
+  <component name="ProjectId" id="1ao5RByWrJSxWsSNdRcwGu1pStz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ch4.Main" />
-      <module name="Programs" />
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="ICS4U" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -36,22 +42,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bbf4eb7-7d65-452f-b52c-3bd36de43b83" name="Default Changelist" comment="" />
-      <created>1580867764189</created>
+      <changelist id="b0954b0d-1e2a-465d-b9d1-358cb0d3bfde" name="Default Changelist" comment="" />
+      <created>1587389095218</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580867764189</updated>
+      <updated>1587389095218</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1580870724376">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1587389452489">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="739" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580870724376" />
-    <state x="342" y="141" key="new project wizard" timestamp="1580870747784">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587389452489" />
+    <state x="65" y="0" key="new project wizard" timestamp="1587389453806">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="342" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1580870747784" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1587389453806" />
   </component>
 </project>
