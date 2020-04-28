@@ -83,8 +83,17 @@ public class Main {
         items.value++;
     }
 
-    public static void changePrice(Vector<String> productNames, Vector<Integer> quantity, Vector<Double> unitPrice) {
-
+    public static void changePrice(Vector<Double> unitPrice, IntObj items) {
+        System.out.print("Enter percent you wish to add to or remove from price: ");
+        double percent = Input.getNumber();
+        Input.getLine();
+        percent/=100.0;
+        percent+=1.0;
+        for (int i=0; i<items.value; i++) {
+            double newValue = unitPrice.get(i);
+            newValue*=percent;
+            unitPrice.set(i, newValue);
+        }
     }
 
     public static void main(String[] args) {
@@ -124,7 +133,7 @@ public class Main {
                         addNew(productNames, quantity, unitPrice, items);
                         break;
                     case "4":
-                        changePrice(productNames, quantity, unitPrice);
+                        changePrice(unitPrice, items);
                         break;
                     default:
                         System.out.println("Option not found. Retype number. If not functioning, contact developer.");
