@@ -69,7 +69,18 @@ public class Main {
     }
 
     public static void addNew(Vector<String> productNames, Vector<Integer> quantity, Vector<Double> unitPrice, IntObj items) {
-
+        System.out.print("Enter new product name: ");
+        String name = Input.getLine();
+        System.out.print("Enter initial quantity: ");
+        int initQuantity = (int)Input.getNumber();
+        Input.getLine();
+        System.out.print("Enter the price per unit: ");
+        double price = Input.getNumber();
+        Input.getLine();
+        productNames.add(name);
+        quantity.add(initQuantity);
+        unitPrice.add(price);
+        items.value++;
     }
 
     public static void changePrice(Vector<String> productNames, Vector<Integer> quantity, Vector<Double> unitPrice) {
