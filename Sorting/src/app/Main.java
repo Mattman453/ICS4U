@@ -1,6 +1,7 @@
 package app;
 
 import mattj.sorts.MergeSort;
+import mattj.sorts.QuickSort;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,7 +68,7 @@ public class Main {
                 array[j] = temp.get(j);
             }
             long startTime = System.nanoTime();
-            array = MergeSort.sort(array);
+            array = QuickSort.sort(array);
             long endTime = System.nanoTime();
             long duration = (endTime-startTime);
             if (printWriter!=null) {
