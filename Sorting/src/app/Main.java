@@ -1,7 +1,6 @@
 package app;
 
-import mattj.sorts.MergeSort;
-import mattj.sorts.QuickSort;
+import mattj.sorts.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -57,22 +56,22 @@ public class Main {
             e.printStackTrace();
         }
         if (scanner!=null) {
-            Vector<Integer> temp = new Vector<>(0, 1);
+            Vector<Long> temp = new Vector<>(0, 1);
             int i = 0;
             while (scanner.hasNextLine()) {
-                temp.add(Integer.parseInt(scanner.nextLine()));
+                temp.add(Long.parseLong(scanner.nextLine()));
                 i++;
             }
-            int[] array = new int[i];
+            long[] array = new long[i];
             for (int j = 0; j < i; j++) {
                 array[j] = temp.get(j);
             }
             long startTime = System.nanoTime();
-            array = QuickSort.sort(array);
+            array = RadixSort.sort(array);
             long endTime = System.nanoTime();
             long duration = (endTime-startTime);
             if (printWriter!=null) {
-                for (int value : array) {
+                for (long value : array) {
                     printWriter.println(value);
                     System.out.print(value + " ");
                 }
@@ -80,7 +79,7 @@ public class Main {
                 System.out.println("That is " + (duration/1000000.0) + " milliseconds.");
                 printWriter.close();
             } else {
-                for (int value : array) {
+                for (long value : array) {
                     System.out.print(value + " ");
                 }
                 System.out.println("\nIt took " + duration + " nanoseconds to complete.");
