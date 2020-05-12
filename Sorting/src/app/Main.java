@@ -70,12 +70,13 @@ public class Main {
                     printWriter.println(value);
                     System.out.print(value + " ");
                 }
+                printWriter.close();
             } else {
                 for (int value : array) {
                     System.out.print(value + " ");
                 }
             }
-
+            scanner.close();
         }
     }
 }
