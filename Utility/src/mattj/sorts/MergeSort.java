@@ -13,8 +13,8 @@ public class MergeSort {
             R[j] = array[m + 1+ j]; 
         int i = 0, j = 0; 
         int k = l; 
-        while (i < n1 && j < n2) { 
-            if (L[i] <= R[j]) { 
+        while (i<n1 && j<n2) { 
+            if (L[i]<=R[j]) { 
                 array[k] = L[i]; 
                 i++; 
             } else { 
@@ -23,12 +23,12 @@ public class MergeSort {
             } 
             k++; 
         } 
-        while (i < n1) { 
+        while (i<n1) { 
             array[k] = L[i]; 
             i++; 
             k++; 
         }
-        while (j < n2) { 
+        while (j<n2) { 
             array[k] = R[j]; 
             j++; 
             k++; 
@@ -36,7 +36,7 @@ public class MergeSort {
     } 
   
     private static void mergeSort(int arr[], int l, int r) { 
-        if (l < r) { 
+        if (l<r) { 
             int m = (l+r)/2; 
             mergeSort(arr, l, m); 
             mergeSort(arr , m+1, r); 
