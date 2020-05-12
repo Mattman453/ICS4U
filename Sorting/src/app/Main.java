@@ -1,5 +1,8 @@
 package app;
 
+import mattj.sorts.BogoSort;
+import mattj.sorts.MergeSort;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -65,7 +68,7 @@ public class Main {
                 array[j] = temp.get(j);
             }
             long startTime = System.nanoTime();
-            insertionSort(array);
+            array = MergeSort.sort(array);
             long endTime = System.nanoTime();
             long duration = (endTime-startTime);
             if (printWriter!=null) {
