@@ -2,7 +2,7 @@ package mattj.sorts;
 
 public class SelectionSort {
 
-    public static byte[] selectionSort(byte[] array) {
+    public static byte[] sort(byte[] array) {
         byte[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;
@@ -16,7 +16,7 @@ public class SelectionSort {
         return aux;
     }
 
-    public static short[] selectionSort(short[] array) {
+    public static short[] sort(short[] array) {
         short[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;
@@ -30,7 +30,7 @@ public class SelectionSort {
         return aux;
     }
 
-    public static int[] selectionSort(int[] array) {
+    public static int[] sort(int[] array) {
         int[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;
@@ -44,7 +44,7 @@ public class SelectionSort {
         return aux;
     }
 
-    public static long[] selectionSort(long[] array) {
+    public static long[] sort(long[] array) {
         long[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;
@@ -58,7 +58,7 @@ public class SelectionSort {
         return aux;
     }
 
-    public static float[] selectionSort(float[] array) {
+    public static float[] sort(float[] array) {
         float[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;
@@ -72,7 +72,7 @@ public class SelectionSort {
         return aux;
     }
 
-    public static double[] selectionSort(double[] array) {
+    public static double[] sort(double[] array) {
         double[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             int min_idx = i;

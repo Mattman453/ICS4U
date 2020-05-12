@@ -2,7 +2,7 @@ package mattj.sorts;
 
 public class BubbleSort {
 
-    public static byte[] bubbleSort(byte[] array) {
+    public static byte[] sort(byte[] array) {
         byte[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
@@ -16,7 +16,7 @@ public class BubbleSort {
         return aux;
     }
 
-    public static short[] bubbleSort(short[] array) {
+    public static short[] sort(short[] array) {
         short[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
@@ -30,7 +30,7 @@ public class BubbleSort {
         return aux;
     }
 
-    public static int[] bubbleSort(int[] array) {
+    public static int[] sort(int[] array) {
         int[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
@@ -44,7 +44,7 @@ public class BubbleSort {
         return aux;
     }
 
-    public static long[] bubbleSort(long[] array) {
+    public static long[] sort(long[] array) {
         long[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
@@ -58,7 +58,7 @@ public class BubbleSort {
         return aux;
     }
 
-    public static float[] bubbleSort(float[] array) {
+    public static float[] sort(float[] array) {
         float[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
@@ -72,7 +72,7 @@ public class BubbleSort {
         return aux;
     }
 
-    public static double[] bubbleSort(double[] array) {
+    public static double[] sort(double[] array) {
         double[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
