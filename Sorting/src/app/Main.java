@@ -1,6 +1,5 @@
 package app;
 
-import mattj.sorts.BogoSort;
 import mattj.sorts.MergeSort;
 
 import java.io.File;
