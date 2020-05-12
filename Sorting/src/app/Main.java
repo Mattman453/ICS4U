@@ -64,17 +64,24 @@ public class Main {
             for (int j = 0; j < i; j++) {
                 array[j] = temp.get(j);
             }
+            long startTime = System.nanoTime();
             insertionSort(array);
+            long endTime = System.nanoTime();
+            long duration = (endTime-startTime);
             if (printWriter!=null) {
                 for (int value : array) {
                     printWriter.println(value);
                     System.out.print(value + " ");
                 }
+                System.out.println("\nIt took " + duration + " nanoseconds to complete.");
+                System.out.println("That is " + (duration/1000000.0) + " milliseconds.");
                 printWriter.close();
             } else {
                 for (int value : array) {
                     System.out.print(value + " ");
                 }
+                System.out.println("\nIt took " + duration + " nanoseconds to complete.");
+                System.out.println("That is " + (duration/1000000.0) + " milliseconds.");
             }
             scanner.close();
         }
