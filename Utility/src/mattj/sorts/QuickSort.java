@@ -187,4 +187,28 @@ public class QuickSort {
         quickSort(aux, 0, aux.length-1);
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {
+        quickSort(array, 0, array.length-1);
+    }
+
+    public static void sortOverride(short[] array) {
+        quickSort(array, 0, array.length-1);
+    }
+
+    public static void sortOverride(int[] array) {
+        quickSort(array, 0, array.length-1);
+    }
+
+    public static void sortOverride(long[] array) {
+        quickSort(array, 0, array.length-1);
+    }
+
+    public static void sortOverride(float[] array) {
+        quickSort(array, 0, array.length-1);
+    }
+
+    public static void sortOverride(double[] array) {
+        quickSort(array, 0, array.length-1);
+    }
 }

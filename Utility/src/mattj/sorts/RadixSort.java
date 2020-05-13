@@ -125,4 +125,28 @@ public class RadixSort {
             countSort(aux, exp);
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {
+        byte m = getMax(array);
+        for (int exp=1; m/exp>0; exp*=10) 
+            countSort(array, exp);
+    }
+
+    public static void sortOverride(short[] array) {
+        short m = getMax(array);
+        for (int exp=1; m/exp>0; exp*=10) 
+            countSort(array, exp);
+    }
+
+    public static void sortOverride(int[] array) {
+        int m = getMax(array);
+        for (int exp=1; m/exp>0; exp*=10) 
+            countSort(array, exp);
+    }
+
+    public static void sortOverride(long[] array) {
+        long m = getMax(array);
+        for (int exp=1; m/exp>0; exp*=10) 
+            countSort(array, exp);
+    }
 }

@@ -129,4 +129,76 @@ public class BogoSort {
         }
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                byte temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+    
+    public static void sortOverride(short[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                short temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+
+    public static void sortOverride(int[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                int temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+
+    public static void sortOverride(long[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                long temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+
+    public static void sortOverride(float[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                float temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+
+    public static void sortOverride(double[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                double temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
 }

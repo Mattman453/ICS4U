@@ -85,4 +85,76 @@ public class SelectionSort {
         }
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                byte temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
+
+    public static void sortOverride(short[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                short temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
+
+    public static void sortOverride(int[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                int temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
+
+    public static void sortOverride(long[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                long temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
+
+    public static void sortOverride(float[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                float temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
+
+    public static void sortOverride(double[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            int min_idx = i;
+            for (int j=i+1; j<array.length; j++)
+                if (array[j]<array[min_idx])
+                    min_idx = j;
+                double temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+        }
+    }
 }

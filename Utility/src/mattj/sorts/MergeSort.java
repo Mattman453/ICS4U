@@ -289,4 +289,28 @@ public class MergeSort {
         mergeSort(aux, 0, aux.length-1); 
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {    
+        mergeSort(array, 0, array.length-1); 
+    }
+    
+    public static void sortOverride(short[] array) {     
+        mergeSort(array, 0, array.length-1); 
+    }
+
+    public static void sortOverride(int[] array) {     
+        mergeSort(array, 0, array.length-1); 
+    }
+
+    public static void sortOverride(long[] array) {     
+        mergeSort(array, 0, array.length-1); 
+    }
+
+    public static void sortOverride(float[] array) {     
+        mergeSort(array, 0, array.length-1); 
+    }
+
+    public static void sortOverride(double[] array) {    
+        mergeSort(array, 0, array.length-1); 
+    }
 } 

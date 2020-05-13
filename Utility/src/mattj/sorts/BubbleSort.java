@@ -85,4 +85,76 @@ public class BubbleSort {
         }
         return aux;
     }
+
+    public static void sortOverride(byte[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    byte temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void sortOverride(short[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    short temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void sortOverride(int[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void sortOverride(long[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    long temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void sortOverride(float[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    float temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void sortOverride(double[] array) {
+        for (int i=0; i<(array.length-1); i++) {
+            for (int j=0; j<(array.length-i-1); j++) {
+                if (array[j]>array[j+1]) {
+                    double temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
 }
