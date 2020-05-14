@@ -1,6 +1,12 @@
 package app;
 
-import mattj.sorts.*;
+import mattj.sorts.BogoSort;
+import mattj.sorts.BubbleSort;
+import mattj.sorts.InsertionSort;
+import mattj.sorts.MergeSort;
+import mattj.sorts.QuickSort;
+import mattj.sorts.RadixSort;
+import mattj.sorts.SelectionSort;
 
 import java.io.File;
 import java.io.IOException;
