@@ -4,12 +4,23 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Collections;
-import java.util.Scanner;
-import java.util.Stack;
-import java.util.Vector;
+import java.util.*;
 
 public class Main {
+
+    public static void mirror(@NotNull Queue<String> queue) {
+        Vector<String> order = new Vector<>(0, 1);
+        while (!queue.isEmpty()) {
+            order.add(queue.remove());
+        }
+        for (int i=0; i<order.capacity(); i++) {
+            queue.add(order.get(i));
+        }
+        for (int i=order.capacity()-1; i>=0; i--) {
+            queue.add(order.get(i));
+        }
+        System.out.println(queue.toString());
+    }
 
     public static void alphabetize(@NotNull Stack<String> stack) {
         Stack<String> backup = (Stack<String>)stack.clone();
@@ -24,6 +35,10 @@ public class Main {
 
     public static void main(String[] args) {
         Stack<String> exams = new Stack();
+        Queue<String> mirror = new LinkedList<>();
+        mirror.add("a");
+        mirror.add("b");
+        mirror.add("c");
         Scanner input = null;
         try {
             input = new Scanner(new File("C:\\Users\\mattj\\Downloads\\exams.txt"));
@@ -35,6 +50,7 @@ public class Main {
                 exams.add(input.nextLine());
             }
             alphabetize(exams);
+            mirror(mirror);
             input.close();
         }
     }
