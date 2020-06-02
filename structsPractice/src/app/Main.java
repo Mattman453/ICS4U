@@ -8,6 +8,18 @@ import java.util.*;
 
 public class Main {
 
+    public static void stutter(@NotNull Queue<Integer> queue) {
+        Vector<Integer> order = new Vector<>(0, 1);
+        while (!queue.isEmpty()) {
+            order.add(queue.remove());
+        }
+        for (int i=0; i<order.capacity(); i++) {
+            queue.add(order.get(i));
+            queue.add(order.get(i));
+        }
+        System.out.println(queue.toString());
+    }
+
     public static void mirror(@NotNull Queue<String> queue) {
         Vector<String> order = new Vector<>(0, 1);
         while (!queue.isEmpty()) {
@@ -36,9 +48,13 @@ public class Main {
     public static void main(String[] args) {
         Stack<String> exams = new Stack();
         Queue<String> mirror = new LinkedList<>();
+        Queue<Integer> stutter = new LinkedList<>();
         mirror.add("a");
         mirror.add("b");
         mirror.add("c");
+        stutter.add(1);
+        stutter.add(2);
+        stutter.add(3);
         Scanner input = null;
         try {
             input = new Scanner(new File("C:\\Users\\mattj\\Downloads\\exams.txt"));
@@ -51,6 +67,7 @@ public class Main {
             }
             alphabetize(exams);
             mirror(mirror);
+            stutter(stutter);
             input.close();
         }
     }
