@@ -1,5 +1,7 @@
 package mattj.sorts;
 
+import java.util.ArrayList;
+
 public class BubbleSort {
 
     public static byte[] sort(byte[] array) {
@@ -90,7 +92,7 @@ public class BubbleSort {
         String[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
-                if (aux[j].compareTo(aux[j+1])<0) {
+                if (aux[j].compareTo(aux[j+1])>0) {
                     String temp = aux[j];
                     aux[j] = aux[j+1];
                     aux[j+1] = temp;
@@ -98,6 +100,16 @@ public class BubbleSort {
             }
         }
         return aux;
+    }
+
+    public static ArrayList<String> sort(ArrayList<String> array) {
+        String[] aux = (String[])array.toArray();
+        sortOverride(aux);
+        ArrayList<String> temp = new ArrayList<>();
+        for (String i : array) {
+            temp.add(i);
+        }
+        return temp;
     }
 
     public static byte[] sort(byte[] array, SortDirection direction) {
@@ -209,7 +221,7 @@ public class BubbleSort {
         String[] aux = array.clone();
         for (int i=0; i<(aux.length-1); i++) {
             for (int j=0; j<(aux.length-i-1); j++) {
-                if (aux[j].compareTo(aux[j+1])>0) {
+                if (aux[j].compareTo(aux[j+1])<0) {
                     String temp = aux[j];
                     aux[j] = aux[j+1];
                     aux[j+1] = temp;
@@ -217,6 +229,20 @@ public class BubbleSort {
             }
         }
         return aux;
+    }
+
+    
+    public static ArrayList<String> sort(ArrayList<String> array, SortDirection direction) {
+        String[] aux = (String[])array.toArray();
+        if (direction==SortDirection.Ascending) {
+            sortOverride(aux);
+        }
+        sortOverride(aux, SortDirection.Descending);
+        ArrayList<String> temp = new ArrayList<>();
+        for (String i : array) {
+            temp.add(i);
+        }
+        return temp;
     }
 
     public static void sortOverride(byte[] array) {

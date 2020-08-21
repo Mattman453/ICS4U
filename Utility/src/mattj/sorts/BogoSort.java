@@ -46,6 +46,13 @@ public class BogoSort {
         return true;
     }
 
+    private static boolean isSorted(String[] array) {
+        for (int i=0; i<array.length-1; i++)
+            if (array[i].compareTo(array[i+1])<0)
+                return false;
+        return true;
+    }
+
     public static byte[] sort(byte[] array) {
         byte[] aux = array.clone();
         Random number = new Random();
@@ -130,6 +137,20 @@ public class BogoSort {
         return aux;
     }
 
+    public static String[] sort(String[] array) {
+        String[] aux = array.clone();
+        Random number = new Random();
+        while (!isSorted(aux)) {
+            for (int i=0; i<aux.length; i++) {
+                String temp = aux[i];
+                int rand = number.nextInt(aux.length);
+                aux[i] = aux[rand];
+                aux[rand] = temp;
+            }
+        }
+        return aux;
+    }
+
     public static void sortOverride(byte[] array) {
         Random number = new Random();
         while (!isSorted(array)) {
@@ -195,6 +216,18 @@ public class BogoSort {
         while (!isSorted(array)) {
             for (int i=0; i<array.length; i++) {
                 double temp = array[i];
+                int rand = number.nextInt(array.length);
+                array[i] = array[rand];
+                array[rand] = temp;
+            }
+        }
+    }
+
+    public static void sortOverride(String[] array) {
+        Random number = new Random();
+        while (!isSorted(array)) {
+            for (int i=0; i<array.length; i++) {
+                String temp = array[i];
                 int rand = number.nextInt(array.length);
                 array[i] = array[rand];
                 array[rand] = temp;

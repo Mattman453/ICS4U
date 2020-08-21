@@ -86,6 +86,20 @@ public class InsertionSort {
         return aux;
     }
 
+    public static String[] sort(String[] array) {
+        String[] aux = array.clone();
+        for (int i=1; i<aux.length; i++) {
+            String h = aux[i];
+            int j = i-1;
+            while (j>=0 && aux[j].compareTo(h)<0) {
+                aux[j+1] = aux[j];
+                j--;
+            }
+            aux[j+1] = h;
+        }
+        return aux;
+    }
+
     public static void sortOverride(byte[] array) {
         for (int i=1; i<array.length; i++) {
             byte h = array[i];
@@ -151,6 +165,18 @@ public class InsertionSort {
             double h = array[i];
             int j = i-1;
             while (j>=0 && array[j]>h) {
+                array[j+1] = array[j];
+                j--;
+            }
+            array[j+1] = h;
+        }
+    }
+
+    public static void sortOverride(String[] array) {
+        for (int i=1; i<array.length; i++) {
+            String h = array[i];
+            int j = i-1;
+            while (j>=0 && array[j].compareTo(h)<0) {
                 array[j+1] = array[j];
                 j--;
             }

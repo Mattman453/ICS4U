@@ -1,12 +1,6 @@
 package app;
 
-import mattj.sorts.BogoSort;
-import mattj.sorts.BubbleSort;
-import mattj.sorts.InsertionSort;
-import mattj.sorts.MergeSort;
-import mattj.sorts.QuickSort;
-import mattj.sorts.RadixSort;
-import mattj.sorts.SelectionSort;
+import mattj.sorts.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -73,7 +67,7 @@ public class Main {
                 array[j] = temp.get(j);
             }
             long startTime = System.nanoTime();
-            array = RadixSort.sort(array);
+            array = SelectionSort.sort(array, SortDirection.Descending);
             long endTime = System.nanoTime();
             long duration = (endTime-startTime);
             if (printWriter!=null) {
